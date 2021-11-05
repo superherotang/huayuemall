@@ -1,0 +1,88 @@
+<ion-content color="mainbg">
+  <div class="header" color="primary">
+    <div class="city" [routerLink]="['/location']">
+      <span class="cityName">昆明</span><span class="cityDown">V</span>
+    </div>
+    <div class="search">
+      <ion-searchbar placeholder="搜素"></ion-searchbar>
+    </div>
+  </div>
+  <div class="content">
+    <div class="banner">
+      <swiper [config]="bannerConfig" class="mySwiper">
+        <ng-template swiperSlide *ngFor="let item of bannerList">
+          <ion-img [src]="item.img"></ion-img>
+        </ng-template>
+      </swiper>
+    </div>
+    <div class="menu">
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="2.4" *ngFor="let item of menuList">
+            <a [routerLink]="item.path" class="menu-item">
+              <ion-img [src]="item.img"></ion-img>
+              <span>{{item.menuName}}</span>
+            </a>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="miaosha">
+      <div class="miaosha-header">
+        <ion-item>
+          <div class="miaosha-title">特价秒杀</div>
+          <div class="miaosha-timer-wrap">
+            <div class="time-sec">20</div>
+            <div class="miaosha-time">
+              <div class="miaosha-time-h ft">00</div>
+              <span class="miaosha-time-separator ft">:</span>
+              <div class="miaosha-time-m ft">17</div>
+              <span class="miaosha-time-separator ft">:</span>
+              <div class="miaosha-time-s ft">28</div>
+            </div>
+          </div>
+
+          <div class="miaosha-more" slot="end">
+            更多秒杀>
+          </div>
+        </ion-item>
+      </div>
+      <swiper [config]="miaoshaConfig" class="miaoshaSwiper">
+        <ng-template swiperSlide *ngFor="let item of miaoshaList" class="miaoshaSlide">
+          <div class="miaosha-goods">
+            <img [src]="item.img" height="85rem" width="74rem" align="middle" />
+            <div class="miaosha-price"><em>¥</em><span>{{item.price}}</span></div>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+    <div class="container">
+      <div class="floorhd_inner">
+        <h3 class="floorhd_tit">为你推荐</h3>
+      </div>
+
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="6" size-lg *ngFor="let item of goodsList">
+            <a [routerLink]="item.path">
+              <div class="goods-show">
+                <img [src]="item.img" width="100%" height="70%">
+                <div class="goods-describe">
+                  {{item.describe}}
+                </div>
+                <div class="goods-price">
+                  <em>¥</em>
+                  <span>{{item.price}}</span>
+                </div>
+              </div>
+            </a>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+      
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,288 @@
+@import "~swiper/scss";
+@import "~swiper/scss/free-mode";
+@import "~swiper/scss/pagination";
+@import "~swiper/scss/scrollbar";
+
+
+ion-content {
+  background-color: #f6f6f6;
+}
+
+.header {
+  height: 60px;
+  width: 100%;
+  background: #3880ff;
+
+  .city {
+    float: left;
+    height: 60px;
+    display: block;
+    line-height: 60px;
+    font-weight: 700;
+
+  }
+
+  .cityName {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+    text-overflow: ellipsis;
+    text-align: center;
+    max-width: 5rem;
+    padding: 0px 0px 0px 15px;
+  }
+
+  .cityDown {
+    display: block;
+    width: 20px;
+    float: left;
+  }
+
+  .search {
+    overflow: hidden;
+    height: 60px;
+    ion-searchbar{
+      --border-radius:.6rem;
+      --box-shadow:0;
+    }
+  }
+}
+
+.content {
+  width: 100%;
+
+  .banner {
+    .swiper {
+      width: 95%;
+      height: 10rem;
+      margin: 10px auto;
+      border-radius: 10px;
+      box-shadow: 2px 2px 5px #909090;
+
+      ion-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+
+  .menu {
+    width: 100%;
+    height: auto;
+    background: #ffaaaa;
+
+    ion-col {
+      text-align: center;
+
+      a {
+        text-decoration: none;
+        color: #000;
+        font-size: 1rem;
+        font-weight: 600;
+
+        ion-img {
+          margin: 0 auto;
+          height: 3rem;
+          width: 3rem;
+        }
+      }
+    }
+  }
+
+  .miaosha {
+    width: 95%;
+    height: 10rem;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #c5bcbc;
+
+    .miaosha-header {
+      width: 100%;
+      height: auto;
+
+      ion-item {
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+      }
+
+      .miaosha-timer-wrap {
+        display: inline-block;
+        border-radius: .4rem;
+        font-size: 0;
+        margin-top: .1rem;
+        margin-left: .2rem;
+        vertical-align: middle;
+      }
+
+      .time-sec {
+        display: block;
+        height: 100%;
+        border-radius: .4rem;
+        font-size: .65rem;
+        color: #ff2727;
+        letter-spacing: 0;
+        padding-right: .25rem;
+        padding-left: .25rem;
+        margin-right: .2rem;
+        float: left;
+      }
+
+      .miaosha-time {
+        .ft {
+          float: left;
+        }
+
+        display: block;
+        margin-right: .2rem;
+        float: right;
+        height: 100%;
+        border-radius: .4rem;
+        font-size: .65rem;
+        color: #ff2727;
+
+        .miaosha-time-h,
+        .miaosha-time-m,
+        .miaosha-time-s {
+          width: 1rem;
+          color: #fff;
+          background-image: -webkit-linear-gradient(230deg, #ff6152, #fa2c19);
+          background-image: linear-gradient(-140deg, #ff6152, #fa2c19);
+          background-color: #fa2c19;
+          border-radius: .2rem;
+          text-align: center;
+          font-weight: 400;
+        }
+
+      }
+
+
+      .miaosha-more {
+
+        float: right;
+        text-decoration: none;
+        color: #f23030;
+        font-size: 1rem;
+        text-align: right;
+        position: relative;
+        padding-right: 1.1rem;
+      }
+    }
+
+    .miaoshaSlide {
+      img {
+        margin: 0px auto;
+        margin-top: .3rem;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+      }
+
+      .miaosha-price {
+        display: block;
+
+        text-align: center;
+        color: #f2270c;
+        font-size: .8rem;
+        font-weight: 600;
+
+        em {
+          font-style: normal;
+          margin-right: .2rem;
+        }
+
+      }
+    }
+
+    .swiper {
+      width: 98%;
+      height: 7.1rem;
+    }
+
+  }
+
+  .container {
+    a {
+      text-decoration: none;
+    }
+
+    .floorhd_inner {
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .floorhd_tit {
+      position: relative;
+      width: 11rem;
+      height: 3rem;
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-align: center;
+      line-height: 3rem;
+      margin: 0 auto;
+      overflow: hidden;
+      color: #333;
+    }
+
+    .floorhd_tit:after,
+    .floorhd_tit:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -10px;
+    }
+
+    .floorhd_tit:before {
+      background-position: 0 0;
+      left: 0;
+    }
+
+    .floorhd_tit:after,
+    .floorhd_tit:before {
+      background-image: url(../../assets/images/sprite.png);
+      width: 25px;
+      height: 20px;
+    }
+
+    .floorhd_tit:after {
+      background-position: -25px 0;
+      right: 0;
+    }
+
+    .goods-show {
+      color: #1a1a1a;
+      border-radius: .4rem;
+      width: 100%;
+      margin: 0px auto;
+      background-color: #fff;
+      padding-bottom: 0;
+      overflow: hidden;
+      height: 17rem;
+
+      .goods-describe {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        font-size: 1rem;
+        padding: .1rem .3rem;
+      }
+      .goods-price{
+        color: #fa2c19;
+        line-height: 2rem;
+        em {
+          font-style: normal;
+          padding: .1rem .3rem;
+        }
+      }
+      
+    }
+
+
+  }
+
+}

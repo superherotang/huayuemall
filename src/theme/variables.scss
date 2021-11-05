@@ -1,6 +1,6 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
-
+@import "../assets/font/iconfont.scss";
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
@@ -74,6 +74,7 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -233,4 +234,14 @@
 
     --ion-card-background: #1e1e1e;
   }
+}
+
+
+.ion-color-mainbg {
+  --ion-color-base: #f6f6f6;
+  --ion-color-base-rgb: var(--ion-color-favorite-rgb);
+  --ion-color-contrast: var(--ion-color-favorite-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-favorite-contrast-rgb);
+  --ion-color-shade: var(--ion-color-favorite-shade);
+  --ion-color-tint: var(--ion-color-favorite-tint);
 }

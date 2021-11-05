@@ -1,0 +1,32 @@
+.header {
+  ion-searchbar {
+    --box-shadow: none;
+    --border-radius: .6rem;
+  }
+}
+
+.right-menu {
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  background: #ccc;
+  ul {
+    padding: 0 .2rem;
+    text-align: center;
+    font-size: .8rem;
+    line-height: 1.2rem;
+    li {
+      width: 1.5rem;
+      list-style: none;
+    }
+  }
+}
+
+
+ion-item-group{
+    ion-item-divider{
+        background: #ccc;
+        height: 2rem;
+        color: rgb(70, 70, 70);
+    }
+}

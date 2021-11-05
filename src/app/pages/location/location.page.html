@@ -1,0 +1,149 @@
+<ion-toolbar class="header" color="primary">
+  <ion-buttons>
+    <ion-button (click)="onback()">
+      <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <ion-searchbar placeholder="搜素"></ion-searchbar>
+  </ion-buttons>
+</ion-toolbar>
+
+
+<ion-content>
+
+  <div class="right-menu" slot="fixed">
+    <ul>
+      <li (click)="scrollIntoView(item)" *ngFor="let item of arr">{{item}}</li>
+    </ul>
+  </div>
+
+
+  <ion-item-group>
+    <ion-item-divider id="A">
+      <ion-label>A</ion-label>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-label>Angola</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Argentina</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Armenia</ion-label>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider id="B">
+      <ion-label>B</ion-label>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-label>Bangladesh</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Belarus</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Belgium</ion-label>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider id="C">
+      <ion-label>C</ion-label>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-label>Angola</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Argentina</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Armenia</ion-label>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider id="D">
+      <ion-label>D</ion-label>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-label>Bangladesh</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Belarus</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Belgium</ion-label>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider id="E">
+      <ion-label>E</ion-label>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-label>Angola</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Argentina</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Armenia</ion-label>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider id="F">
+      <ion-label>F</ion-label>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-label>Bangladesh</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Belarus</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Belgium</ion-label>
+    </ion-item>
+  </ion-item-group>
+  
+  <ion-item-group>
+    <ion-item-divider id="G">
+      <ion-label>G</ion-label>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-label>Angola</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Argentina</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Armenia</ion-label>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider id="H">
+      <ion-label>H</ion-label>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-label>Bangladesh</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Belarus</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Belgium</ion-label>
+    </ion-item>
+  </ion-item-group>
+
+
+</ion-content>
