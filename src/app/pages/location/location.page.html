@@ -8,10 +8,10 @@
 </ion-toolbar>
 
 
-<ion-content>
+<ion-content scroll="false" overflow-scroll="true">
 
   <div class="right-menu" slot="fixed">
-    <ul>
+    <ul >
       <li (click)="scrollIntoView(item)" *ngFor="let item of arr">{{item}}</li>
     </ul>
   </div>
