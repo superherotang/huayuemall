@@ -1,11 +1,31 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>user</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content color="userbg">
+  <div class="top">
+    <div class="top-content" (click)="showLogin()">
+      <ion-avatar>
+        <img src="../../assets/images/menuimg1.png" />
+      </ion-avatar>
+      <div class="top-no-login">
+        <a>点击登录</a>
+      </div>
+    </div>
+  </div>
+  <div class="order">
+    <div class="m">
+      <div class="order-top">
+        <span>我的订单</span>
+        <span>全部订单></span>
+      </div>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="2.4" *ngFor="let item of menuList">
+            <a [routerLink]="item.path" class="menu-item">
+              <ion-img [src]="item.img"></ion-img>
+              <span>{{item.menuName}}</span>
+            </a>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
 
-<ion-content>
-  <ion-button (click)="showLogin()">
-    Click me
-  </ion-button>
 </ion-content>

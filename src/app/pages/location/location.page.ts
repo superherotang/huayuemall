@@ -29,6 +29,7 @@ export class LocationPage implements OnInit {
     let element = document.getElementById(id);
     console.log(id)
     if(id=="^"){
+      console.log("123")
       document.querySelector('ion-content').scrollToTop(500);
     }
     if(element){

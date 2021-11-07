@@ -30,6 +30,7 @@ export class LoginPage implements OnInit {
   onClose() {
     if (this.route) {
       this.navCtrl.navigateBack(this.route);
+      
     } else {
       this.navCtrl.navigateBack('/');
     }

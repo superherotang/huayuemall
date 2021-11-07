@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import SwiperCore, { SwiperOptions, Pagination, FreeMode, Scrollbar } from 'swiper';
+import {location } from '../app.config'
+
 
 SwiperCore.use([Pagination, FreeMode, Scrollbar]);
 
@@ -11,6 +13,7 @@ SwiperCore.use([Pagination, FreeMode, Scrollbar]);
 })
 export class HomePage implements OnInit {
 
+  location:string=location
 
   bannerConfig: SwiperOptions = {//轮播图属性
     pagination: { clickable: true },
