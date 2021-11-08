@@ -1,12 +1,14 @@
-<ion-content color="mainbg">
-  <div class="header" color="primary">
-    <div class="city" [routerLink]="['/location']">
-      <span class="cityName">{{location}}</span><span class="cityDown">V</span>
-    </div>
-    <div class="search">
-      <ion-searchbar placeholder="搜素"></ion-searchbar>
-    </div>
+<div class="home-header">
+  <div class="city" [routerLink]="['/location']">
+    <span class="cityName">{{location}}</span><span class="cityDown">V</span>
   </div>
+  <div class="search">
+    <ion-searchbar placeholder="搜素"></ion-searchbar>
+  </div>
+</div>
+
+<ion-content color="mainbg" >
+
   <div class="content">
     <div class="banner">
       <swiper [config]="bannerConfig" class="mySwiper">
@@ -16,7 +18,7 @@
       </swiper>
     </div>
     <div class="menu">
-      <ion-grid fixed>
+      <ion-grid>
         <ion-row>
           <ion-col size="2.4" *ngFor="let item of menuList">
             <a [routerLink]="item.path" class="menu-item">
@@ -82,7 +84,7 @@
       </ion-grid>
 
 
-      
+
     </div>
   </div>
 </ion-content>
