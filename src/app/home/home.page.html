@@ -67,7 +67,7 @@
       <ion-grid fixed>
         <ion-row>
           <ion-col size="6" size-lg *ngFor="let item of goodsList">
-            <a [routerLink]="item.path">
+            <a [routerLink]="['/details',item.path]">
               <div class="goods-show">
                 <img [src]="item.img" width="100%" height="70%">
                 <div class="goods-describe">

@@ -1,0 +1,39 @@
+@import "~swiper/scss";
+@import "~swiper/scss/free-mode";
+@import "~swiper/scss/pagination";
+@import "~swiper/scss/scrollbar";
+
+ion-content{
+    min-width: 15rem;
+}
+.details-header{
+    height: 3rem;
+    width: 100%;
+    .details-header-back{
+        height: 2.5rem;
+        width: 2.5rem;
+        background-color: #ccc;
+        opacity: 0.7;
+        border-radius: 50%;
+        margin-top: .25rem;
+        margin-left: .5rem;
+        float: left;
+        ion-icon{
+            font-size: 2rem;
+            padding: .25rem;
+        }
+    }
+    .details-header-more{
+        height: 2.5rem;
+        width: 2.5rem;
+        opacity: 0.7;
+        border-radius: 50%;
+        margin-top: .25rem;
+        margin-right: .5rem;
+        float: right;
+        ion-icon{
+            font-size: 2rem;
+            padding: .25rem;
+        }
+    }
+}

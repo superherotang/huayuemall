@@ -130,25 +130,25 @@ export class HomePage implements OnInit {
 
   goodsList = [
     {
-      path: '/tabs/home',
+      path: '123',
       img: "../../assets/images/menuimg1.png",
       describe: "科瑞宝士(CURAPROX)瑞士进口牙刷 超细软毛牙刷5460 单支颜色随机",
       price:1000
     },
     {
-      path: '/tabs/cart',
+      path: '123',
       img: "../../assets/images/menuimg1.png",
       describe: "科瑞宝士(CURAPROX)瑞士进口牙刷 超细软毛牙刷5460 单支颜色随机",
       price:2000
     },
     {
-      path: '/login',
+      path: '123',
       img: "../../assets/images/menuimg1.png",
       describe: "【满300 减200】三只松鼠休闲零食每日坚果干果开口松子100g\/160g坚果炒货东北手剥红松子 100g",
       price:3000
     },
     {
-      path: '/tabs/user',
+      path: '123',
       img: "../../assets/images/menuimg1.png",
       describe: "【满300 减200】三只松鼠休闲零食每日坚果干果开口松子100g\/160g坚果炒货东北手剥红松子 100g",
       price:4000
