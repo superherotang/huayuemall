@@ -3,37 +3,135 @@
 @import "~swiper/scss/pagination";
 @import "~swiper/scss/scrollbar";
 
-ion-content{
-    min-width: 15rem;
-}
-.details-header{
-    height: 3rem;
+.swiper {
+  width: 100%;
+  height: 100%;
+
+  ion-img {
     width: 100%;
-    .details-header-back{
-        height: 2.5rem;
-        width: 2.5rem;
-        background-color: #ccc;
-        opacity: 0.7;
-        border-radius: 50%;
-        margin-top: .25rem;
-        margin-left: .5rem;
-        float: left;
-        ion-icon{
-            font-size: 2rem;
-            padding: .25rem;
-        }
+    height: 100%;
+  }
+}
+
+.item-floor {
+  margin-top: 12px;
+  padding: 0 18px;
+  border-radius: 12px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+ion-content {
+  min-width: 20rem;
+}
+
+.details-header {
+  height: 3rem;
+  width: 100%;
+
+  .details-header-back {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #ccc;
+    opacity: 0.7;
+    border-radius: 50%;
+    margin-top: .25rem;
+    margin-left: .5rem;
+    float: left;
+
+    ion-icon {
+      font-size: 2rem;
+      padding: .25rem;
     }
-    .details-header-more{
-        height: 2.5rem;
-        width: 2.5rem;
-        opacity: 0.7;
-        border-radius: 50%;
-        margin-top: .25rem;
-        margin-right: .5rem;
-        float: right;
-        ion-icon{
-            font-size: 2rem;
-            padding: .25rem;
-        }
+  }
+
+  .details-header-more {
+    height: 2.5rem;
+    width: 2.5rem;
+    opacity: 0.7;
+    border-radius: 50%;
+    margin-top: .25rem;
+    margin-right: .5rem;
+    float: right;
+
+    ion-icon {
+      font-size: 2rem;
+      padding: .25rem;
     }
+  }
+}
+
+.buy-area {
+  width: 100%;
+
+  .price-wrap {
+    width: 100%;
+    height: 3rem;
+    background-color: #fff;
+    color: #f2270c;
+    line-height: 3rem;
+
+    .price {
+      margin-left: 1rem;
+
+      em {
+        font-style: normal;
+        font-size: 1rem;
+      }
+
+      .price-integer {
+        font-size: 2rem;
+      }
+
+      .price-decimals {
+        font-size: 1rem;
+      }
+    }
+
+  }
+
+
+  .goods-title {
+    padding: 1rem;
+    background-color: #fff;
+  }
+}
+
+
+
+.sku-window {
+  background: #fff;
+  padding: 18px 0;
+  position: relative;
+  font-size: 13px;
+  color: #8c8c8c;
+}
+.attribute{
+  font-size: 1rem;
+  width: 3rem;
+  color: #262626;
+  font-weight: 700;
+}
+.choose{
+  color: #262626;
+  padding: 0 1rem;
+}
+.open-select{
+  float: right;
+}
+.transfer-window{
+  background: #fff;
+  padding: 18px 0;
+  position: relative;
+  font-size: 13px;
+  color: #8c8c8c;
+}
+
+.detail-tab{
+  background-color: #fff;
+  ion-col{
+    height: 3rem;
+    line-height: 2rem;
+    text-align: center;
+  }
 }

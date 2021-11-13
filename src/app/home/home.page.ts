@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import SwiperCore, { SwiperOptions, Pagination, FreeMode, Scrollbar } from 'swiper';
+import SwiperCore, { Autoplay,SwiperOptions, Pagination, FreeMode, Scrollbar } from 'swiper';
 import {location } from '../app.config'
 
 
-SwiperCore.use([Pagination, FreeMode, Scrollbar]);
+SwiperCore.use([Autoplay,Pagination, FreeMode, Scrollbar]);
 
 @Component({
   selector: 'app-home',

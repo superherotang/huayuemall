@@ -7,13 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { DetailsPageRoutingModule } from './details-routing.module';
 
 import { DetailsPage } from './details.page';
+import { SwiperModule } from "swiper/angular";
+import { MaskModule } from '../../modules/mask/mask.module'
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DetailsPageRoutingModule
+    DetailsPageRoutingModule,
+    SwiperModule,
+    MaskModule
   ],
   declarations: [DetailsPage]
 })

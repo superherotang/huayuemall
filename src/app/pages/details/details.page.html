@@ -1,4 +1,4 @@
-<ion-content>
+<ion-content color="mainbg">
   <div class="details-header" slot="fixed">
     <div class="details-header-back" (click)="onClickBack()">
       <ion-icon name="chevron-back-outline"></ion-icon>
@@ -7,7 +7,70 @@
       <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
     </div>
   </div>
-  <div class="goods-img">
-    
+  <div class="goods-img" #goodsImg>
+    <swiper [config]="bannerConfig" #swiperRef class="mySwiper">
+      <ng-template swiperSlide *ngFor="let item of goodsImgList">
+        <ion-img [src]="item.img"></ion-img>
+      </ng-template>
+    </swiper>
   </div>
+  <div class="buy-area">
+    <div class="price-wrap">
+      <div class="price">
+        <em>¥</em>
+        <span class="price-integer">1999</span>
+        <span class="price-decimals">.00</span>
+      </div>
+    </div>
+    <div class="goods-title">
+      <div class="goods-name">
+        青藏公主风干牛肉干216克四川特产五香麻辣自然风干牛肉干内蒙古西藏手撕超干牦牛肉干袋装休闲零食 五香味
+      </div>
+
+    </div>
+  </div>
+
+  <div class="item-floor">
+    <div class="sku-window">
+      <div class="sku-choose-info" (click)="onClickMore()">
+        <span class="attribute">已选</span>
+        <span class="choose">五香味，1个</span>
+        <span class="open-select">。。。</span>
+      </div>
+    </div>
+    <div class="transfer-window">
+      <div class="transfer" (click)="onClickMore()">
+        <span class="attribute">送至</span>
+        <span class="choose">云南省昆明市呈贡区</span>
+        <span class="open-select">。。。</span>
+      </div>
+    </div>
+  </div>
+
+  <!--商品评价 todo-->
+  <div class="comment-floor">
+    <div class="item-floor">
+      
+    </div>
+  </div>
+
+
+  <div class="detail-tab">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="4">商品介绍</ion-col>
+        <ion-col size="4">参数规格</ion-col>
+        <ion-col size="4">售后保障</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="goods-detail">
+    <div class="item-floor">
+      
+    </div>
+  </div>
+
 </ion-content>
+<mask #mask>
+  <div style="width: 100%;height: 100rem;background-color:white;"><input type="button" value="123"></div>
+</mask>
