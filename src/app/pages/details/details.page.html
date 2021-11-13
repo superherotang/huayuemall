@@ -50,7 +50,7 @@
   <!--商品评价 todo-->
   <div class="comment-floor">
     <div class="item-floor">
-      
+
     </div>
   </div>
 
@@ -58,19 +58,69 @@
   <div class="detail-tab">
     <ion-grid fixed>
       <ion-row>
-        <ion-col size="4">商品介绍</ion-col>
-        <ion-col size="4">参数规格</ion-col>
-        <ion-col size="4">售后保障</ion-col>
+        <ion-col size="4" (click)="onGoodsDetail()">商品介绍</ion-col>
+        <ion-col size="4" (click)="onGoodsSpec()">参数规格</ion-col>
+        <ion-col size="4" (click)="onGoodsGuarantee()">售后保障</ion-col>
       </ion-row>
     </ion-grid>
   </div>
+  <!--商品详情-->
   <div class="goods-detail">
-    <div class="item-floor">
-      
+    <div class="detail_item">
+
+      <p>
+        <img
+          src="//img13.360buyimg.com/imgzone/jfs/t1/102538/26/18073/105489/5e92da61E9c615a60/0c126f2081906c51.jpg!q70.dpg.webp">
+        <img
+          src="//img30.360buyimg.com/imgzone/jfs/t1/86735/14/18428/122034/5e92da62Ef7073d4b/a293aaa101c9c1d1.jpg!q70.dpg.webp">
+        <img
+          src="//img12.360buyimg.com/imgzone/jfs/t1/100419/18/18394/124105/5e92da62E8ad90191/daf9f6b2ec16be74.jpg!q70.dpg.webp">
+        <img
+          src="//img14.360buyimg.com/imgzone/jfs/t1/88340/13/18460/170969/5e92da62Ea6090871/b568f316882cab83.jpg!q70.dpg.webp">
+        <img
+          src="//img30.360buyimg.com/imgzone/jfs/t1/116760/21/957/147328/5e92da62E04ed1922/a7d84ed3d72653e4.jpg!q70.dpg.webp">
+        <img
+          src="//img13.360buyimg.com/imgzone/jfs/t1/87085/2/18453/128145/5e92da62Eda368b88/562e566e0dd1a478.jpg!q70.dpg.webp"><br>
+      </p>
+
     </div>
+  </div>
+
+  <!--商品规格-->
+  <div class="good-spec">
+    <div>
+      <div class="mod_tit_line">
+        <h3>商品参数</h3>
+      </div>
+      <div class="detParam">
+        <table cellpadding="0" cellspacing="1" width="100%" border="1" class="param-table">
+          <tr>
+            <td>商品编号</td>
+            <td>10024689922082</td>
+          </tr>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!--商品保障-->
+  <div class="goods-guarantee">
+    <div>
+      <div class="mod_tit_line">
+        <h3>权力声明</h3>
+      </div>
+    </div>
+  </div>
+  <div class="goods-detail-footer">
+    logo
+  </div>
+  
+  <div class="cart-box" slot="fixed">
+
   </div>
 
 </ion-content>
 <mask #mask>
-  <div style="width: 100%;height: 100rem;background-color:white;"><input type="button" value="123"></div>
+  <div style="width: 100%;height: 10rem;background-color:white;"><input type="button" value="123"></div>
 </mask>

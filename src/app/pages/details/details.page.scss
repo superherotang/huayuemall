@@ -12,6 +12,9 @@
     height: 100%;
   }
 }
+.goods-img{
+  min-height: 10rem;
+}
 
 .item-floor {
   margin-top: 12px;
@@ -106,20 +109,24 @@ ion-content {
   font-size: 13px;
   color: #8c8c8c;
 }
-.attribute{
+
+.attribute {
   font-size: 1rem;
   width: 3rem;
   color: #262626;
   font-weight: 700;
 }
-.choose{
+
+.choose {
   color: #262626;
   padding: 0 1rem;
 }
-.open-select{
+
+.open-select {
   float: right;
 }
-.transfer-window{
+
+.transfer-window {
   background: #fff;
   padding: 18px 0;
   position: relative;
@@ -127,11 +134,116 @@ ion-content {
   color: #8c8c8c;
 }
 
-.detail-tab{
+.detail-tab {
   background-color: #fff;
-  ion-col{
+
+  ion-col {
     height: 3rem;
     line-height: 2rem;
     text-align: center;
   }
+}
+
+.goods-detail {
+  min-height: 50rem;
+  display: block;
+
+  .detail_item {
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  p {
+    margin: 0;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+}
+
+
+.good-spec {
+  
+  display: none;
+  min-height: 50rem;
+  color: #666;
+  background-color: #fff;
+  padding-bottom: 10px;
+
+  .mod_tit_line {
+    border-top: 1px solid #ddd;
+    text-align: center;
+    height: 6px;
+    margin: 0 20px 10px;
+
+    h3 {
+      position: relative;
+      display: inline-block;
+      font-size: 12px;
+      height: 12px;
+      line-height: 12px;
+      top: -22px;
+      font-weight: 600;
+      padding: 0 20px;
+      background: #fff;
+    }
+  }
+
+  .detParam {
+    width: 96vw;
+
+    margin: 0 auto;
+
+    .param-table {
+      width: 100%;
+      margin-bottom: 10px;
+      border-collapse: collapse;
+      font-size: 14px;
+      border-spacing: 0;
+      line-height: 18px;
+    }
+  }
+
+}
+
+.goods-guarantee{
+  display: none;
+  min-height: 50rem;
+  color: #666;
+  background-color: #fff;
+  padding-bottom: 10px;
+  .mod_tit_line {
+    border-top: 1px solid #ddd;
+    text-align: center;
+    height: 6px;
+    margin: 0 20px 10px;
+
+    h3 {
+      position: relative;
+      display: inline-block;
+      font-size: 12px;
+      height: 12px;
+      line-height: 12px;
+      top: -22px;
+      font-weight: 600;
+      padding: 0 20px;
+      background: #fff;
+    }
+  }
+
+
+}
+
+
+.goods-detail-footer{
+  width: 100vw;
+  height: 10rem;
+  line-height: 10rem;
+  text-align: center;
+}
+
+.cart-box{
+  width: 100vw;
 }

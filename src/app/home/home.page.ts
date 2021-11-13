@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import SwiperCore, { Autoplay,SwiperOptions, Pagination, FreeMode, Scrollbar } from 'swiper';
 import {location } from '../app.config'
-
+import { ModalController } from '@ionic/angular';
+import { SearchComponent } from '../components/search/search.component'
 
 SwiperCore.use([Autoplay,Pagination, FreeMode, Scrollbar]);
 
@@ -155,14 +156,18 @@ export class HomePage implements OnInit {
     },
 
   ]
-  constructor() {
+  constructor(public modalController: ModalController) {
 
   }
 
   ngOnInit() {
   }
-  ngAfterViewInit() {
 
-
+  async onClickSearch(){
+    const modal = await this.modalController.create({
+      component: SearchComponent,
+      animated:false
+    });
+    return await modal.present();
   }
 }

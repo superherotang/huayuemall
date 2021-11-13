@@ -1,0 +1,68 @@
+<ion-content color="mainbg">
+  <div class="search-header-form">
+    <div class="searcg-cancel-btn" (click)="onClickBack()">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+    </div>
+    <div class="search">
+      <ion-searchbar placeholder="搜索"></ion-searchbar>
+    </div>
+    <div class="search-btn" [routerLink]="['/tabs/cart']" (click)="onClickSearchBtn()">
+      <span>搜索</span>
+    </div>
+  </div>
+
+  <div class="word-search">
+    <div class="hot-search">
+      <div class="word-search-title">
+        热门搜索
+      </div>
+      <div class="word-item">
+        <span>测试</span> 
+        <span>测试</span>
+        <span>测试</span>
+        <span>测试</span> 
+        <span>测试</span>
+        <span>测试</span>
+        <span>测试</span> 
+        <span>测试</span>
+        <br class="clear"/>
+      </div>
+    </div>
+    <div class="history-search">
+      <div class="history-search">
+        <div class="word-search-title">
+          搜索历史
+        </div>
+        <div class="word-item">
+          <span>测试</span>
+          <span>测试</span>
+          <span>测试</span>
+          <span>测试</span> 
+          <span>测试</span>
+          <span>测试</span>
+          <span>测试</span> 
+          <span>测试</span>
+          <br class="clear"/>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="search-list">
+    <ul>
+      <li>123</li>
+      <li>123</li>
+      <li>123</li>
+      <li>123</li>
+      <li>123</li>
+      <li>123</li>
+      <li>123</li>
+      <li>123</li>
+      <li>123</li>
+      <li>123</li>
+      <li>123</li>
+    </ul>
+  </div>
+
+</ion-content>

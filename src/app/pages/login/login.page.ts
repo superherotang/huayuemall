@@ -28,13 +28,15 @@ export class LoginPage implements OnInit {
   }
 
   onClose() {
+    this.navCtrl.back();
+    /*
     if (this.route) {
       this.navCtrl.navigateBack(this.route);
       
     } else {
       this.navCtrl.navigateBack('/');
     }
-
+   */
   }
 
   onClickPhone() {
@@ -58,21 +60,21 @@ export class LoginPage implements OnInit {
     let countdown = 10;
 
     interval(1000)
-    .pipe((take(countdown + 1)))
-    .subscribe(() => {
-      console.log(countdown)
-      if (countdown == 0) {
+      .pipe((take(countdown + 1)))
+      .subscribe(() => {
+        console.log(countdown)
+        if (countdown == 0) {
 
-        this.disabled = false;
-        codeBtn.innerText = "获取验证码";
-        countdown = 10;
-        return;
-      } else {
-        this.disabled = true;
-        codeBtn.innerText = "重新发送(" + countdown + "s)";
-        countdown--;
-      }
-    })
+          this.disabled = false;
+          codeBtn.innerText = "获取验证码";
+          countdown = 10;
+          return;
+        } else {
+          this.disabled = true;
+          codeBtn.innerText = "重新发送(" + countdown + "s)";
+          countdown--;
+        }
+      })
   }
 
 }
