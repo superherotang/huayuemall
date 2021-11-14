@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { SearchComponent } from '../components/search/search.component'
 
 @Component({
   selector: 'app-category',
@@ -45,9 +47,17 @@ export class CategoryPage implements OnInit {
     },
   ]
 
-  constructor() { }
+  constructor(public modalController: ModalController) { }
 
   ngOnInit() {
+  }
+
+  async onClickSearch(){
+    const modal = await this.modalController.create({
+      component: SearchComponent,
+      animated:false
+    });
+    return await modal.present();
   }
 
 }

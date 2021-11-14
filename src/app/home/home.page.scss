@@ -38,9 +38,10 @@
   .search {
     overflow: hidden;
     height: 60px;
-    ion-searchbar{
-      --border-radius:.6rem;
-      --box-shadow:0;
+
+    ion-searchbar {
+      --border-radius: .6rem;
+      --box-shadow: 0;
     }
   }
 }
@@ -48,6 +49,9 @@
 .content {
   width: 100%;
   min-width: 20rem;
+
+  max-width: 1140px;
+  margin: 0 auto;
   .banner {
     .swiper {
       width: 95%;
@@ -68,7 +72,6 @@
   .menu {
     width: 100%;
     height: auto;
-    background: #ffaaaa;
 
     ion-col {
       text-align: center;
@@ -168,12 +171,10 @@
     }
 
     .miaoshaSlide {
-      img {
-        margin: 0px auto;
-        margin-top: .3rem;
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
+      .miaosha-goods {
+        padding: .2rem;
+        height: 100%;
+        width: 100%;
       }
 
       .miaosha-price {
@@ -267,15 +268,17 @@
         font-size: 1rem;
         padding: .1rem .3rem;
       }
-      .goods-price{
+
+      .goods-price {
         color: #fa2c19;
         line-height: 2rem;
+
         em {
           font-style: normal;
           padding: .1rem .3rem;
         }
       }
-      
+
     }
 
 

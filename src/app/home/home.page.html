@@ -10,6 +10,7 @@
 <ion-content color="mainbg" >
 
   <div class="content">
+    <!-- 轮播 -->
     <div class="banner">
       <swiper [config]="bannerConfig" class="mySwiper">
         <ng-template swiperSlide *ngFor="let item of bannerList">
@@ -17,6 +18,7 @@
         </ng-template>
       </swiper>
     </div>
+    <!-- 菜单 -->
     <div class="menu">
       <ion-grid>
         <ion-row>
@@ -29,7 +31,7 @@
         </ion-row>
       </ion-grid>
     </div>
-
+    <!-- 秒杀 -->
     <div class="miaosha">
       <div class="miaosha-header">
         <ion-item>
@@ -53,12 +55,14 @@
       <swiper [config]="miaoshaConfig" class="miaoshaSwiper">
         <ng-template swiperSlide *ngFor="let item of miaoshaList" class="miaoshaSlide">
           <div class="miaosha-goods">
-            <img [src]="item.img" height="85rem" width="74rem" align="middle" />
+            <ion-img [src]="item.img" align="middle"></ion-img>
             <div class="miaosha-price"><em>¥</em><span>{{item.price}}</span></div>
           </div>
         </ng-template>
       </swiper>
     </div>
+
+    <!-- 推荐 -->
     <div class="container">
       <div class="floorhd_inner">
         <h3 class="floorhd_tit">为你推荐</h3>

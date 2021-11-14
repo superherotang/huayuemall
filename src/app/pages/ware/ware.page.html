@@ -21,7 +21,7 @@
 
   <ion-grid fixed>
     <ion-row class="ware-goods-list cols-2">
-      <ion-col size="6" *ngFor="let item of goodsList">
+      <ion-col [size]="cols" *ngFor="let item of goodsList" [routerLink]="['/details',item.goodsID]">
         <div class="ware-item">
           <!-- <img src="../../../assets/images/skill.png" alt=""> -->
           <div class="ware-item-img">
@@ -51,7 +51,7 @@
     <ion-fab-button size="small">Mini</ion-fab-button>
   </ion-fab>
   <ion-fab slot="fixed" class="ware-to-switch" (click)="onClickchangeView($event)">
-    <ion-fab-button size="small">1</ion-fab-button>
+    <ion-fab-button size="small" class="ware-to-switch-button">1</ion-fab-button>
   </ion-fab>
 
 </ion-content>
