@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { WarePageRoutingModule } from './ware-routing.module';
 
 import { WarePage } from './ware.page';
+import { PriceReformPipe } from '../../pipes/price-reform.pipe';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { WarePage } from './ware.page';
     IonicModule,
     WarePageRoutingModule
   ],
-  declarations: [WarePage]
+  declarations: [WarePage,PriceReformPipe]
 })
 export class WarePageModule {}

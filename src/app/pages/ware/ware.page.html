@@ -1,9 +1,57 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>ware</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="ware-header" slot="fixed">
+  <div class="ware-cancel-btn" (click)="onClickBack()">
+    <ion-icon name="chevron-back-outline"></ion-icon>
+  </div>
+  <div class="ware-search">
+    <ion-searchbar placeholder="搜索"></ion-searchbar>
+  </div>
+  <div class="ware-header-tab">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="3"><span>综合</span></ion-col>
+        <ion-col size="3"><span>销量</span></ion-col>
+        <ion-col size="3"><span>价格</span></ion-col>
+        <ion-col size="3"><span>筛选</span></ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
-<ion-content>
+</div>
+<ion-content color="mainbg">
+
+  <ion-grid fixed>
+    <ion-row class="ware-goods-list cols-2">
+      <ion-col size="6" *ngFor="let item of goodsList">
+        <div class="ware-item">
+          <!-- <img src="../../../assets/images/skill.png" alt=""> -->
+          <div class="ware-item-img">
+            <ion-img [src]="item.goodsImg"></ion-img>
+          </div>
+          <div class="ware-goods-info">
+            <div class="ware-goods-title">
+              {{item.goodsTitle}}
+            </div>
+            <div class="ware-goods-price">
+              <em>¥</em>
+              <span class="price-integer">{{item.goodsPrice|priceReform:'0'}}</span>
+              <span class="price-decimals">.{{item.goodsPrice|priceReform:'1'}}</span>
+            </div>
+            <div class="ware-buy-count">
+              <span>{{item.buyCount}}</span>次购买
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab slot="fixed" class="ware-to-top">
+    <ion-fab-button size="small">Mini</ion-fab-button>
+  </ion-fab>
+  <ion-fab slot="fixed" class="ware-to-switch" (click)="onClickchangeView($event)">
+    <ion-fab-button size="small">1</ion-fab-button>
+  </ion-fab>
 
 </ion-content>

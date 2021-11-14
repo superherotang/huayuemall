@@ -1,10 +1,10 @@
 <ion-content color="mainbg">
   <div class="search-header-form">
-    <div class="searcg-cancel-btn" (click)="onClickBack()">
+    <div class="search-cancel-btn" (click)="onClickBack()">
       <ion-icon name="chevron-back-outline"></ion-icon>
     </div>
     <div class="search">
-      <ion-searchbar placeholder="搜索"></ion-searchbar>
+      <ion-searchbar [(ngModel)]="searchContent" (ionChange)="onSearchChange()" placeholder="搜索"></ion-searchbar>
     </div>
     <div class="search-btn" [routerLink]="['/tabs/cart']" (click)="onClickSearchBtn()">
       <span>搜索</span>
@@ -17,15 +17,15 @@
         热门搜索
       </div>
       <div class="word-item">
-        <span>测试</span> 
         <span>测试</span>
         <span>测试</span>
-        <span>测试</span> 
         <span>测试</span>
         <span>测试</span>
-        <span>测试</span> 
         <span>测试</span>
-        <br class="clear"/>
+        <span>测试</span>
+        <span>测试</span>
+        <span>测试</span>
+        <br class="clear" />
       </div>
     </div>
     <div class="history-search">
@@ -37,12 +37,12 @@
           <span>测试</span>
           <span>测试</span>
           <span>测试</span>
-          <span>测试</span> 
           <span>测试</span>
           <span>测试</span>
-          <span>测试</span> 
           <span>测试</span>
-          <br class="clear"/>
+          <span>测试</span>
+          <span>测试</span>
+          <br class="clear" />
         </div>
       </div>
     </div>
@@ -51,17 +51,7 @@
 
   <div class="search-list">
     <ul>
-      <li>123</li>
-      <li>123</li>
-      <li>123</li>
-      <li>123</li>
-      <li>123</li>
-      <li>123</li>
-      <li>123</li>
-      <li>123</li>
-      <li>123</li>
-      <li>123</li>
-      <li>123</li>
+      <li *ngFor="let item of keyList" (click)="onClickSearchItem(item.key)" >{{ item.key }}</li>
     </ul>
   </div>
 
