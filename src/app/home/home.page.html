@@ -7,7 +7,7 @@
   </div>
 </div>
 
-<ion-content color="mainbg" >
+<ion-content color="mainbg">
 
   <div class="content">
     <!-- 轮播 -->
@@ -55,7 +55,10 @@
       <swiper [config]="miaoshaConfig" class="miaoshaSwiper">
         <ng-template swiperSlide *ngFor="let item of miaoshaList" class="miaoshaSlide">
           <div class="miaosha-goods">
-            <ion-img [src]="item.img" align="middle"></ion-img>
+            <div class="miaosha-goods-img">
+
+              <ion-img [src]="item.img" align="middle"></ion-img>
+            </div>
             <div class="miaosha-price"><em>¥</em><span>{{item.price}}</span></div>
           </div>
         </ng-template>
@@ -73,7 +76,9 @@
           <ion-col size="6" size-lg *ngFor="let item of goodsList">
             <a [routerLink]="['/details',item.path]">
               <div class="goods-show">
-                <img [src]="item.img" width="100%" height="70%">
+                <div class="goods-show-img">
+                  <ion-img [src]="item.img"></ion-img>
+                </div>
                 <div class="goods-describe">
                   {{item.describe}}
                 </div>

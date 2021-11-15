@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import SwiperCore, { Autoplay,SwiperOptions, Pagination, FreeMode, Scrollbar } from 'swiper';
-import {location } from '../app.config'
+import SwiperCore, { Autoplay, SwiperOptions, Pagination, FreeMode, Scrollbar } from 'swiper';
+import { location } from '../app.config'
 import { ModalController } from '@ionic/angular';
 import { SearchComponent } from '../components/search/search.component'
 
-SwiperCore.use([Autoplay,Pagination, FreeMode, Scrollbar]);
+SwiperCore.use([Autoplay, Pagination, FreeMode, Scrollbar]);
 
 @Component({
   selector: 'app-home',
@@ -14,7 +14,7 @@ SwiperCore.use([Autoplay,Pagination, FreeMode, Scrollbar]);
 })
 export class HomePage implements OnInit {
 
-  location:string=location
+  location: string = location
 
   bannerConfig: SwiperOptions = {//轮播图属性
     pagination: { clickable: true },
@@ -132,27 +132,27 @@ export class HomePage implements OnInit {
   goodsList = [
     {
       path: '123',
-      img: "../../assets/images/menuimg1.png",
+      img: "../../assets/images/asd.png",
       describe: "科瑞宝士(CURAPROX)瑞士进口牙刷 超细软毛牙刷5460 单支颜色随机",
-      price:1000
+      price: 1000
     },
     {
       path: '123',
-      img: "../../assets/images/menuimg1.png",
+      img: "../../assets/images/skill.png",
       describe: "科瑞宝士(CURAPROX)瑞士进口牙刷 超细软毛牙刷5460 单支颜色随机",
-      price:2000
+      price: 2000
     },
     {
       path: '123',
       img: "../../assets/images/menuimg1.png",
       describe: "【满300 减200】三只松鼠休闲零食每日坚果干果开口松子100g\/160g坚果炒货东北手剥红松子 100g",
-      price:3000
+      price: 3000
     },
     {
       path: '123',
       img: "../../assets/images/menuimg1.png",
       describe: "【满300 减200】三只松鼠休闲零食每日坚果干果开口松子100g\/160g坚果炒货东北手剥红松子 100g",
-      price:4000
+      price: 4000
     },
 
   ]
@@ -162,11 +162,18 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
   }
+  ngAfterViewInit(): void {
+    let msImgny:any=document.getElementsByClassName("miaosha-goods")[0].children[0]
+    console.log(msImgny.style.width);
+    msImgny.style.height=msImgny.style.clientWidth;
+    
+    
+  }
 
-  async onClickSearch(){
+  async onClickSearch() {
     const modal = await this.modalController.create({
       component: SearchComponent,
-      animated:false
+      animated: false
     });
     return await modal.present();
   }
