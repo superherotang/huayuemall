@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import SwiperCore, { Autoplay, SwiperOptions, Pagination, FreeMode, Scrollbar } from 'swiper';
-import { location } from '../app.config'
+import { location } from '../../app.config'
 import { ModalController } from '@ionic/angular';
-import { SearchComponent } from '../components/search/search.component'
+import { SearchComponent } from '../../components/search/search.component'
 
 SwiperCore.use([Autoplay, Pagination, FreeMode, Scrollbar]);
 

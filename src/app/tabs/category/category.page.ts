@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { SearchComponent } from '../components/search/search.component'
+import { SearchComponent } from '../../components/search/search.component'
 
 @Component({
   selector: 'app-category',

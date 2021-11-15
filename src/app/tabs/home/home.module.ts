@@ -8,7 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
 import { SwiperModule } from 'swiper/angular';
-import { SearchComponent } from '../components/search/search.component'
+import { SearchComponent } from '../../components/search/search.component'
 
 
 @NgModule({
