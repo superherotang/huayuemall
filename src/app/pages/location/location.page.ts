@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { Component, OnInit,ViewChild, } from '@angular/core';
+import { NavController,IonContent } from '@ionic/angular';
 
 @Component({
   selector: 'app-location',
@@ -8,7 +8,7 @@ import { NavController } from '@ionic/angular';
 })
 export class LocationPage implements OnInit {
 
-   
+  @ViewChild("Content") content: IonContent;
   arr:string[];
   
 
@@ -27,13 +27,10 @@ export class LocationPage implements OnInit {
   }
   scrollIntoView(id: string):void {
     let element = document.getElementById(id);
-    console.log(id)
     if(id=="^"){
-      console.log("123")
-      document.querySelector('ion-content').scrollToTop(500);
+      this.content.scrollToTop(500);
     }
     if(element){
-      console.log(element)
       element.scrollIntoView();
     }
 

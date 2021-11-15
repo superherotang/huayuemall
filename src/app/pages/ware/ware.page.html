@@ -19,9 +19,9 @@
 </div>
 <ion-content color="mainbg">
 
-  <ion-grid fixed>
+  <ion-grid >
     <ion-row class="ware-goods-list cols-2">
-      <ion-col [size]="cols" *ngFor="let item of goodsList" [routerLink]="['/details',item.goodsID]">
+      <ion-col [size]="cols"   *ngFor="let item of goodsList" [routerLink]="['/details',item.goodsID]">
         <div class="ware-item">
           <!-- <img src="../../../assets/images/skill.png" alt=""> -->
           <div class="ware-item-img">

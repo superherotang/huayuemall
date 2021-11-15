@@ -164,7 +164,6 @@ export class HomePage implements OnInit {
   }
   ngAfterViewInit(): void {
     let msImgny:any=document.getElementsByClassName("miaosha-goods")[0].children[0]
-    console.log(msImgny.style.width);
     msImgny.style.height=msImgny.style.clientWidth;
     
     

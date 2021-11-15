@@ -94,8 +94,23 @@ ion-content {
 
 .cols-2 {
   .ware-item-img {
+    position: relative;
     width: 100%;
-    height: 181px;
+
+    ion-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      object-fit: cover;
+    }
+  }
+
+  .ware-item-img::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
   }
 }
 
@@ -114,12 +129,13 @@ ion-content {
   }
 }
 
-.ware-to-top{
-    right: .5rem;
-    bottom: 25%;
-    
+.ware-to-top {
+  right: .5rem;
+  bottom: 25%;
+
 }
-.ware-to-switch{
-    right: .5rem;
-    bottom: 16%;
+
+.ware-to-switch {
+  right: .5rem;
+  bottom: 16%;
 }
